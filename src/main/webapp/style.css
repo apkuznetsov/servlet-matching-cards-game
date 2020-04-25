@@ -63,6 +63,10 @@ input {
     margin-bottom: 20px;
 }
 
+.bottom-button {
+    margin-top: 30px;
+}
+
 canvas {
     display: block;
     width: 300px;
