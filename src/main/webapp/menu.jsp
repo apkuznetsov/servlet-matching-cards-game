@@ -13,13 +13,14 @@
     <style type="">
         <%@include file="/style.css" %>
     </style>
-    <title>Меню</title>
+    <title>Паззл</title>
 </head>
 <body>
-<h1>Меню</h1>
 <div class="canvas-like-div">
+    <h1>Паззл</h1>
+
     <div class="centered-group">
-        <form action="${pageContext.request.contextPath}/game">
+        <form action="${pageContext.request.contextPath}/settings">
             <input type="submit"
                    value="Начать игру"
                    class="menu-button"/>
