@@ -31,3 +31,17 @@ function shuffle(array) {
 
     return array;
 }
+
+function shuffleImages() {
+    let shuffledImages = shuffle(imgElementsArray);
+
+    for (let i = 0; i < shuffledImages.length; i++) {
+        cardElements[i].innerHTML = "";
+
+        cardElements[i].appendChild(shuffledImages[i]);
+        cardElements[i].type = `${shuffledImages[i].alt}`;
+
+        cardElements[i].classList.remove("show", "open", "match", "disabled");
+        cardElements[i].children[0].classList.remove("show-img");
+    }
+}
