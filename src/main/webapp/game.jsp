@@ -101,7 +101,6 @@
 
     let moves;
     let second = 0;
-    let minute = 0;
     let interval;
 
     function shuffle(array) {
@@ -201,21 +200,14 @@
 
         if (moves === 1) {
             second = 0;
-            minute = 0;
-
             startTimer();
         }
     }
 
     function startTimer() {
         interval = setInterval(function () {
-            timeCounter.innerHTML = `${minute} мин. ${second} сек.`;
-
+            timeCounter.innerHTML = `${second} сек.`;
             second++;
-            if (second === 60) {
-                minute++;
-                second = 0;
-            }
         }, 1000)
     }
 
@@ -272,6 +264,15 @@
     function endGame() {
         clearInterval(interval);
         matchedCards = [];
+
+        let form = document.createElement('form');
+        form.action = '${pageContext.request.contextPath}/gameover';
+        form.method = 'POST';
+        form.innerHTML = '<input id="score" type="hidden" name="score">';
+        document.body.append(form);
+        document.getElementById("score").value = snake.length;
+        form.submit();
+        return;
     }
 
     window.onload = function () {
