@@ -147,6 +147,23 @@ function matched() {
     }
 }
 
+function unmatched() {
+    openedCards[0].classList.add("unmatched");
+    openedCards[1].classList.add("unmatched");
+    disable();
+
+    setTimeout(function () {
+        openedCards[0].classList.remove("show", "open", "unmatched");
+        openedCards[1].classList.remove("show", "open", "unmatched");
+
+        openedCards[0].children[0].classList.remove('show-img');
+        openedCards[1].children[0].classList.remove('show-img');
+        enable();
+
+        openedCards = [];
+    }, 1100)
+}
+
 function enable() {
     cardElementsArray.filter((card) => {
         card.classList.remove('disabled');
@@ -154,6 +171,12 @@ function enable() {
         for (let i = 0; i < matchedCards.length; i++) {
             matchedCards[i].classList.add('disabled');
         }
+    })
+}
+
+function disable() {
+    cardElementsArray.filter((card) => {
+        card.classList.add('disabled');
     })
 }
 
