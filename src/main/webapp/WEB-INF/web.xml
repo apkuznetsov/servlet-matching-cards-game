@@ -44,4 +44,14 @@
         <url-pattern>/game</url-pattern>
     </servlet-mapping>
 
+    <servlet>
+        <servlet-name>GameoverServlet</servlet-name>
+        <servlet-class>GameoverServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GameoverServlet</servlet-name>
+        <url-pattern>/gameover</url-pattern>
+    </servlet-mapping>
+
 </web-app>
