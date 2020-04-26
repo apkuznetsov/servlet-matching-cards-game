@@ -81,3 +81,39 @@ function resetTimer() {
     timeCounter.innerHTML = '0 мин. 0 сек.';
     clearInterval(interval);
 }
+
+function displayCard() {
+    this.children[0].classList.toggle('show-img');
+    this.classList.toggle("open");
+    this.classList.toggle("show");
+    this.classList.toggle("disabled");
+
+    openCard(this);
+}
+
+function openCard(card) {
+    openedCards.push(card);
+
+    let len = openedCards.length;
+    if (len === 2) {
+        countMoves();
+
+        if (openedCards[0].type === openedCards[1].type) {
+            matched();
+        } else {
+            unmatched();
+        }
+    }
+}
+
+function countMoves() {
+    moves++;
+    movesCounter.innerHTML = moves;
+
+    if (moves === 1) {
+        second = 0;
+        minute = 0;
+
+        startTimer();
+    }
+}
