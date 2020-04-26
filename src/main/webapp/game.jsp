@@ -27,62 +27,6 @@
 
 <table class="game-board">
     <tbody class="game-grid">
-    <tr class="game-grid-row">
-        <td class="game-card">
-            <img alt="cake1" class="game-card-img" src="images/1.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake2" class="game-card-img" src="images/2.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake3" class="game-card-img" src="images/3.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake4" class="game-card-img" src="images/4.jpg">
-        </td>
-    </tr>
-    <tr class="game-grid-row">
-        <td class="game-card">
-            <img alt="cake5" class="game-card-img" src="images/5.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake6" class="game-card-img" src="images/6.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake7" class="game-card-img" src="images/7.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake8" class="game-card-img" src="images/8.jpg">
-        </td>
-    </tr>
-    <tr class="game-grid-row">
-        <td class="game-card">
-            <img alt="cake1" class="game-card-img" src="images/1.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake2" class="game-card-img" src="images/2.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake3" class="game-card-img" src="images/3.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake4" class="game-card-img" src="images/4.jpg">
-        </td>
-    </tr>
-    <tr class="game-grid-row">
-        <td class="game-card">
-            <img alt="cake5" class="game-card-img" src="images/5.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake6" class="game-card-img" src="images/6.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake7" class="game-card-img" src="images/7.jpg">
-        </td>
-        <td class="game-card">
-            <img alt="cake8" class="game-card-img" src="images/8.jpg">
-        </td>
-    </tr>
     </tbody>
 </table>
 
