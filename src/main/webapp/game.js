@@ -117,3 +117,23 @@ function countMoves() {
         startTimer();
     }
 }
+
+function startTimer() {
+    interval = setInterval(function () {
+        timeCounter.innerHTML = `${minute} мин. ${second} сек.`;
+
+        second++;
+        if (second === 60) {
+            minute++;
+            second = 0;
+        }
+    }, 1000)
+}
+
+
+
+window.onload = function () {
+    setTimeout(function () {
+        startGame()
+    }, 1200);
+};
