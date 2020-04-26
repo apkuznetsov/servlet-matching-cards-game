@@ -26,7 +26,7 @@
 
             <label>
                 По горизонтали
-                <select name="horizontal">
+                <select name="sizes">
                     <option value="2">2</option>
                     <option value="4">4</option>
                     <option value="6">6</option>
@@ -35,7 +35,7 @@
 
             <label>
                 По вертикали
-                <select name="vertical">
+                <select name="sizes">
                     <option value="2">2</option>
                     <option value="4">4</option>
                     <option value="6">6</option>
