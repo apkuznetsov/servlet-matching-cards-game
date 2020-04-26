@@ -180,6 +180,11 @@ function disable() {
     })
 }
 
+function endGame() {
+    clearInterval(interval);
+    matchedCards = [];
+}
+
 window.onload = function () {
     setTimeout(function () {
         startGame()
