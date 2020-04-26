@@ -60,6 +60,18 @@ function addDisplayCardListener() {
     }
 }
 
+function displayAllCards() {
+    for (let i = 0; i < cardElements.length; i++) {
+        cardElements[i].children[0].classList.add("show-img")
+    }
+
+    setTimeout(function () {
+        for (let i = 0; i < cardElements.length; i++) {
+            cardElements[i].children[0].classList.remove("show-img")
+        }
+    }, 1000)
+}
+
 function resetMoves() {
     moves = 0;
     movesCounter.innerText = moves;
