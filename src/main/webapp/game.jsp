@@ -100,7 +100,7 @@
     let matchedCards = [];
 
     let moves;
-    let second = 0;
+    let seconds = 0;
     let interval;
 
     function shuffle(array) {
@@ -199,15 +199,15 @@
         movesCounter.innerHTML = moves;
 
         if (moves === 1) {
-            second = 0;
+            seconds = 0;
             startTimer();
         }
     }
 
     function startTimer() {
         interval = setInterval(function () {
-            timeCounter.innerHTML = `${second} сек.`;
-            second++;
+            timeCounter.innerHTML = `${seconds} сек.`;
+            seconds++;
         }, 1000)
     }
 
@@ -262,17 +262,13 @@
     }
 
     function endGame() {
-        clearInterval(interval);
-        matchedCards = [];
-
         let form = document.createElement('form');
         form.action = '${pageContext.request.contextPath}/gameover';
         form.method = 'POST';
         form.innerHTML = '<input id="score" type="hidden" name="score">';
         document.body.append(form);
-        document.getElementById("score").value = snake.length;
+        document.getElementById("score").value = seconds;
         form.submit();
-        return;
     }
 
     window.onload = function () {
