@@ -8,8 +8,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
-    <meta http-equiv="Content-Type"
-          content="text/html; charset=ISO-8859-1">
+    <meta charset=UTF-8"
+            http-equiv="Content-Type"
+          content="text/html">
     <style type="">
         <%@include file="/style.css" %>
     </style>
