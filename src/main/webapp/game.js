@@ -130,7 +130,32 @@ function startTimer() {
     }, 1000)
 }
 
+function matched() {
+    openedCards[0].classList.add("match");
+    openedCards[1].classList.add("match");
 
+    openedCards[0].classList.remove("show", "open");
+    openedCards[1].classList.remove("show", "open");
+
+    matchedCards.push(openedCards[0]);
+    matchedCards.push(openedCards[1]);
+
+    openedCards = [];
+
+    if (matchedCards.length === 16) {
+        endGame();
+    }
+}
+
+function enable() {
+    cardElementsArray.filter((card) => {
+        card.classList.remove('disabled');
+
+        for (let i = 0; i < matchedCards.length; i++) {
+            matchedCards[i].classList.add('disabled');
+        }
+    })
+}
 
 window.onload = function () {
     setTimeout(function () {
