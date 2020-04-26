@@ -32,6 +32,14 @@ function shuffle(array) {
     return array;
 }
 
+function startGame() {
+    shuffleImages();
+    addDisplayCardListener();
+    displayAllCards();
+    resetMoves();
+    resetTimer();
+}
+
 function shuffleImages() {
     let shuffledImages = shuffle(imgElementsArray);
 
@@ -44,4 +52,20 @@ function shuffleImages() {
         cardElements[i].classList.remove("show", "open", "match", "disabled");
         cardElements[i].children[0].classList.remove("show-img");
     }
+}
+
+function addDisplayCardListener() {
+    for (let i = 0; i < cardElementsArray.length; i++) {
+        cardElementsArray[i].addEventListener("click", displayCard)
+    }
+}
+
+function resetMoves() {
+    moves = 0;
+    movesCounter.innerText = moves;
+}
+
+function resetTimer() {
+    timeCounter.innerHTML = '0 мин. 0 сек.';
+    clearInterval(interval);
 }
