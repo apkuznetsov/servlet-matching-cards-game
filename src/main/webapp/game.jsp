@@ -25,7 +25,7 @@
     <span class="time-counter" id="timeCounter">0 мин. 0 сек.</span>
 </div>
 
-<table class="game-board">
+<table class="game-board" id="gameBoard">
     <tbody class="game-grid">
     </tbody>
 </table>
@@ -46,6 +46,31 @@
     let moves;
     let seconds = 0;
     let interval;
+
+    function createGameBoard() {
+        let colsNum = <%= request.getAttribute("horizontal") %>;
+        let rowsNum = <%= request.getAttribute("vertical") %>;
+
+        const tableRef = document.getElementById('gameBoard').getElementsByTagName('tbody')[0];
+
+        let imageNum = 0;
+        for (let rowIndex = 0; rowIndex < rowsNum; rowIndex++) {
+            for (let colIndex = 0; colIndex < colsNum; colIndex++) {
+                let newRow = tableRef.insertRow();
+                newRow.className = "game-grid-row";
+
+                let newCell = newRow.insertCell(colIndex);
+                newCell.className = "game-card";
+
+                let img = document.createElement('img');
+                img.className = "game-card-img";
+                imageNum++;
+                img.src = "images/" + imageNum + ".jpg";
+
+                newCell.append(img);
+            }
+        }
+    }
 
     function shuffle(array) {
         let currIndex = array.length;
