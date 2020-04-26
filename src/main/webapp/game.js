@@ -14,3 +14,20 @@ let moves;
 let second = 0;
 let minute = 0;
 let interval;
+
+function shuffle(array) {
+    let currIndex = array.length;
+
+    let randomIndex;
+    let tempVal;
+    while (currIndex !== 0) {
+        randomIndex = Math.floor(Math.random() * currIndex);
+        currIndex -= 1;
+
+        tempVal = array[currIndex];
+        array[currIndex] = array[randomIndex];
+        array[randomIndex] = tempVal;
+    }
+
+    return array;
+}
